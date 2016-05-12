@@ -1,7 +1,7 @@
 package dto;
 
 /**
- * Created by JuanA on 5/9/2016.
+ * Created by Juan Almeyda on 5/9/2016.
  */
 public class Hello {
 

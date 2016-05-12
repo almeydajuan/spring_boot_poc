@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import service.HelloService;
 
 /**
- * Created by JuanA on 5/9/2016.
+ * Created by Juan Almeyda on 5/9/2016.
  */
 @RestController
 public class HelloController {
