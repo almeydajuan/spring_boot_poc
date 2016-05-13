@@ -1,5 +1,6 @@
 package job;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +13,11 @@ import java.util.Properties;
 @Component
 public class HelloJob {
 
-    @Resource
-    private Properties properties;
+    @Value("${job}")
+    private String job;
 
     @Scheduled(fixedRate = 60000)
     public void run() {
-        System.out.println(properties.get("job"));
+        System.out.println(job);
     }
 }

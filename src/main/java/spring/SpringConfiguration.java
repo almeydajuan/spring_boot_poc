@@ -13,16 +13,4 @@ import java.util.Properties;
 @Configuration
 public class SpringConfiguration {
 
-    @Bean(name = "properties")
-    public Properties properties() throws IOException {
-        Properties properties = new Properties();
-        InputStream input = SpringConfiguration.class.getClassLoader()
-                .getResourceAsStream(getPropertiesFileName());
-        properties.load(input);
-        return properties;
-    }
-
-    private String getPropertiesFileName() {
-        return String.format("%s.properties", System.getProperty("environment"));
-    }
 }

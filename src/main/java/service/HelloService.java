@@ -1,6 +1,7 @@
 package service;
 
 import dto.Hello;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,12 +14,12 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class HelloService {
 
-    @Resource
-    private Properties properties;
+    @Value("${greeting}")
+    private String greeting;
 
     private final AtomicLong counter = new AtomicLong();
 
     public Hello sayHello() {
-        return new Hello(String.format(properties.getProperty("greeting"), counter.incrementAndGet()));
+        return new Hello(String.format(greeting, counter.incrementAndGet()));
     }
 }
