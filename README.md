@@ -11,3 +11,4 @@ This is a simple app which shows how simple is:
 * Choose between different environments by program arguments
 * Use the @Configuration annotation to initialize beans
 * Schedule a job
+* Web services with JAX-RX
