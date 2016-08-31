@@ -1,10 +1,10 @@
-package controller;
+package ar.com.jalmeyda.controller;
 
-import dto.Hello;
+import ar.com.jalmeyda.dto.Hello;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.HelloService;
+import ar.com.jalmeyda.service.HelloService;
 
 /**
  * Created by Juan Almeyda on 5/9/2016.
@@ -18,5 +18,10 @@ public class HelloController {
     @RequestMapping("/hello")
     public Hello hello() {
         return helloService.sayHello();
+    }
+
+    @RequestMapping("/ping")
+    public String ping() {
+        return "pong";
     }
 }

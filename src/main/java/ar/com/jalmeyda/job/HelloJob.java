@@ -1,11 +1,8 @@
-package job;
+package ar.com.jalmeyda.job;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-import java.util.Properties;
 
 /**
  * Created by Juan Almeyda on 5/12/2016.
@@ -13,7 +10,7 @@ import java.util.Properties;
 @Component
 public class HelloJob {
 
-    @Value("${job}")
+    @Value("${ar.com.jalmeyda.job}")
     private String job;
 
     @Scheduled(fixedRate = 60000)

@@ -1,4 +1,4 @@
-package dto;
+package ar.com.jalmeyda.dto;
 
 /**
  * Created by Juan Almeyda on 5/9/2016.

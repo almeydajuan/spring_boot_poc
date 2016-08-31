@@ -1,11 +1,9 @@
-package service;
+package ar.com.jalmeyda.service;
 
-import dto.Hello;
+import ar.com.jalmeyda.dto.Hello;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.Properties;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
