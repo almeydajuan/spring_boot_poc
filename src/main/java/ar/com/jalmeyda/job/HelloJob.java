@@ -13,7 +13,7 @@ public class HelloJob {
     @Value("${ar.com.jalmeyda.job}")
     private String job;
 
-    @Scheduled(fixedRate = 60000)
+    @Scheduled(fixedDelayString = "${job.frequency}")
     public void run() {
         System.out.println(job);
     }
