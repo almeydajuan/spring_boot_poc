@@ -10,5 +10,5 @@ This is a simple app which shows how simple is:
 * Manage dependency injection with annotations
 * Choose between different environments by program arguments
 * Use the @Configuration annotation to initialize beans
-* Schedule a ar.com.jalmeyda.job
+* Schedule a Job
 * Web services with JAX-RX
