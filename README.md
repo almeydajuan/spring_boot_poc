@@ -12,6 +12,7 @@ This is a simple app which shows how simple is:
 * Use the @Configuration annotation to initialize beans
 * Schedule a Job
 * Web services with JAX-RX
+* Document the API with swagger
 
 How to run it:
 
