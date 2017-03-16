@@ -21,7 +21,7 @@ import javax.validation.Valid;
 @RequestMapping("/api/person/")
 public class PersonController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "findPerson/")
+    @RequestMapping(method = RequestMethod.GET)
     @ApiOperation(
             value = "Find person by id",
             notes = "Find person by id",
@@ -31,10 +31,10 @@ public class PersonController {
             @ApiResponse( code = 404, message = "Person with such id doesn't exists" )
     } )
     public Person findById(@Valid String id) {
-        return new Person(id, "mock name", new Date());
+        return new Person(id, "mock name", new Date(), "any surname");
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "addPerson/")
+    @RequestMapping(method = RequestMethod.POST)
     @ApiOperation(
             value = "Add a person",
             notes = "Add a person",
