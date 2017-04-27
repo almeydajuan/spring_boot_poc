@@ -16,5 +16,5 @@ This is a simple app which shows how simple is:
 
 How to run it:
 
-* Add -Dspring.profiles.active=local/production to the starter class
+* If you want to use production environment you should add -Dspring.profiles.active=production to the starter class, by default it runs in local environment
 * Check localhost:8080/swagger-ui.html
