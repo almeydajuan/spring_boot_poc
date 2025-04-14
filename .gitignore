@@ -1,3 +1,5 @@
+build/
+
 #=====
 # Java
 #=====
@@ -38,3 +40,7 @@ buildNumber.properties
 .classpath
 .project
 .settings/
+
+# Gradle
+.gradle/
+gradlew.bat

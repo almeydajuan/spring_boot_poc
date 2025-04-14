@@ -1,18 +1,9 @@
 package ar.com.jalmeyda.controller;
 
-import ar.com.jalmeyda.dto.Hello;
 import ar.com.jalmeyda.dto.Person;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.Date;
-import javax.validation.Valid;
 
 /**
  * Created by juanalmeyda on 3/13/17.
@@ -21,29 +12,13 @@ import javax.validation.Valid;
 @RequestMapping("/api/person/")
 public class PersonController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    @ApiOperation(
-            value = "Find person by id",
-            notes = "Find person by id",
-            response = Person.class
-    )
-    @ApiResponses( {
-            @ApiResponse( code = 404, message = "Person with such id doesn't exists" )
-    } )
-    public Person findById(@Valid String id) {
-        return new Person(id, "mock name", new Date(), "any surname");
+    @GetMapping
+    public Person findById(String id) {
+        return new Person(id, "mock name", new Date());
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    @ApiOperation(
-            value = "Add a person",
-            notes = "Add a person",
-            response = Person.class
-    )
-    @ApiResponses( {
-            @ApiResponse( code = 201, message = "The person was created correctly" )
-    } )
-    public Person addPerson(@Valid @RequestBody Person person) {
+    @PostMapping
+    public Person addPerson(@RequestBody Person person) {
         return person;
     }
 }
