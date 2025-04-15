@@ -12,12 +12,11 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:3.4.4")
-    implementation("org.springdoc:springdoc-openapi-ui:1.8.0")
 }
 
 group = "ar.com.jalmeyda"
 version = "1.0"
-description = "spring-boot"
+description = "Spring Boot POC"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
 
