@@ -12,6 +12,10 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:3.4.4")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.4.4")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test:3.4.4")
+    testImplementation("org.hsqldb:hsqldb:2.7.4")
 }
 
 group = "ar.com.jalmeyda"
