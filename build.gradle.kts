@@ -24,5 +24,11 @@ version = "1.0"
 description = "Spring Boot POC"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+}
+
 
 
