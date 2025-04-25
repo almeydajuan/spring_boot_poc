@@ -1,6 +1,11 @@
 package ar.com.jalmeyda;
 
 import ar.com.jalmeyda.domain.Task;
-import org.springframework.data.repository.ListCrudRepository;
 
-public interface TaskRepository extends ListCrudRepository<Task, Long> { }
+import java.util.Optional;
+
+public interface TaskRepository {
+    Task save(Task task);
+
+    Optional<Task> findById(Long id);
+}

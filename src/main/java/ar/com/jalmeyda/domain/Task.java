@@ -19,4 +19,17 @@ public class Task {
         return id;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Task) {
+            return id.equals(((Task) obj).id);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
 }
