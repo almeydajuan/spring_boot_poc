@@ -1,4 +1,4 @@
-package ar.com.jalmeyda;
+package ar.com.jalmeyda.repository;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package ar.com.jalmeyda;
+package ar.com.jalmeyda.repository;
 
 import ar.com.jalmeyda.domain.Task;
 import org.junit.jupiter.api.Test;
