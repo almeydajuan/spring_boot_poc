@@ -6,10 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Transactional
-public class InMemoryTaskRepositoryTest extends TaskRepositoryTest {
+public class JpaTaskRepositoryTest extends TaskRepositoryTest {
 
     @Autowired
-    InMemoryTaskRepository repository;
+    JpaTaskRepository repository;
 
     @Override
     protected TaskRepository repository() {
