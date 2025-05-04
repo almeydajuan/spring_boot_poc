@@ -6,10 +6,13 @@ import jakarta.persistence.*;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     public Task() {
+    }
+
+    public Task(Long id) {
+        this.id = id;
     }
 
     public Long getId() {
