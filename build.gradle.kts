@@ -5,9 +5,6 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven {
-        url = uri("https://company/com/maven2")
-    }
 }
 
 dependencies {

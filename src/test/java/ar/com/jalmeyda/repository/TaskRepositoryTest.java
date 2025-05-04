@@ -1,25 +1,29 @@
 package ar.com.jalmeyda.repository;
 
 import ar.com.jalmeyda.domain.Task;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public abstract class TaskRepositoryTest {
+@SpringBootTest
+@Transactional
+public class TaskRepositoryTest {
 
-    protected abstract TaskRepository repository();
+    @Autowired
+    TaskRepository repository;
 
     @Test
     public void findTaskById() {
         Task simpleTask = new Task();
-        simpleTask.setId(new Random().nextLong());
-        repository().save(simpleTask);
+        repository.save(simpleTask);
 
-        Optional<Task> taskFound = repository().findById(simpleTask.getId());
+        Optional<Task> taskFound = repository.findById(simpleTask.getId());
         assertTrue(taskFound.isPresent());
         assertEquals(simpleTask, taskFound.get());
     }
